@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunde</title>
+  <style>
+    [ng-cloak] { display: none }
+  </style>
+</head>
+<body ng-app="app" ng-cloak>
+
+<div ng-controller="MainController as main">
+
+  <div ng-bind-html="main.danger"></div>
+  <user-detail id="67"></user-detail>
+
+  <ul>
+    <li ng-repeat="name in main.names">
+      {{ name }} ({{ $index + 1 }})
+    </li>
+  </ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+<script src="app.js"></script>
+<script src="users.js"></script>
+<script src="user-detail.js"></script>
+</body>
+</html>
